@@ -17,10 +17,11 @@ class App < Sinatra::Base
   #params is a hash
   get "/goodbye/:name" do
     @user_name = params[:name]
-    "Goodbye, #{@user_name}!"
+    "Goodbye #{@user_name}!"
   end
 
   get "multiply/:num1/:num2"
   @numbers = params[:number1][:number2]
   "#{@numbers}"
+  end
 end
